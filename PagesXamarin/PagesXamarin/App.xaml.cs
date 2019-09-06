@@ -11,7 +11,11 @@ namespace PagesXamarin
         {
             InitializeComponent();
 
+<<<<<<< HEAD
             MainPage = new SportListPage();
+=======
+            MainPage = new EsporteListPage();
+>>>>>>> Test-gus-2
         }
 
         protected override void OnStart()
