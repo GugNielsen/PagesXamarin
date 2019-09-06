@@ -100,11 +100,11 @@ namespace PagesXamarin.ViewModels
             set { SetProperty(ref _listAlunos, value); }
         }
 
-        List<Aluno> _fakeList;
+        List<Aluno> _repositoryList;
         public List<Aluno> RepositoryList
         {
-            get { return _fakeList; }
-            set { SetProperty(ref _fakeList, value); }
+            get { return _repositoryList; }
+            set { SetProperty(ref _repositoryList, value); }
         }
 
         List<Esporte> _alunoSportList;
@@ -121,7 +121,6 @@ namespace PagesXamarin.ViewModels
             SportList = new List<Esporte>();
             ListAluno = new List<Aluno>();
             RepositoryList = new List<Aluno>();
-            AlunoSportList = new List<Esporte>();
             Name = "Gustavo Nielsen";
             Email = "gusanielsen@gmail.com";
             InicialName = RegexUtilities.ExtractInitialsFromName(Name);
@@ -222,6 +221,8 @@ namespace PagesXamarin.ViewModels
         private async Task SportSelectedAsync(Esporte item)
         {
             IsBusy = true;
+            AlunoSportList = new List<Esporte>();
+            AlunoSportList.Add(item);
             
         }
         private DelegateCommand _saveItemCommand;
@@ -239,6 +240,7 @@ namespace PagesXamarin.ViewModels
             Aluno.DataNiver = DataNiver;
             Aluno.CelResponsavel = CelResponsavel;
             Aluno.InicialName = RegexUtilities.ExtractInitialsFromName(NameAluno);
+            Aluno.AlunoSportList = AlunoSportList;
             RepositoryList.Add(Aluno);
             IsBusy = false;
             NameAluno = null;

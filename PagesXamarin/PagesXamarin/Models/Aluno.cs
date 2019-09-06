@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using Newtonsoft.Json;
 
 namespace PagesXamarin.Models
@@ -15,6 +16,9 @@ namespace PagesXamarin.Models
         public string CelResponsavel { get; set; }
         [JsonProperty(PropertyName = "inicialname")]
         public string InicialName { get; set; }
+        [JsonProperty(PropertyName = "alunosportlist")]
+        public List<Esporte> AlunoSportList { get; set; }
+
         public Aluno()
         {
         }
