@@ -1,4 +1,5 @@
 ﻿using System;
+using PagesXamarin.Views;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -10,7 +11,7 @@ namespace PagesXamarin
         {
             InitializeComponent();
 
-            MainPage = new MainPage();
+            MainPage = new SportListPage();
         }
 
         protected override void OnStart()
