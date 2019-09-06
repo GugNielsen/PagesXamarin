@@ -5,13 +5,13 @@
     <Platform Condition=" '$(Platform)' == '' ">iPhoneSimulator</Platform>
     <ProductVersion>8.0.30703</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{19EE2798-DDA5-48D9-ABB3-1E645C14DF0D}</ProjectGuid>
+    <ProjectGuid>{A69FA7F1-5CE4-4821-9A8F-6A1C6D4377F9}</ProjectGuid>
     <ProjectTypeGuids>{FEACFBD2-3405-455C-9665-78FE426C6842};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <TemplateGuid>{6143fdea-f3c2-4a09-aafa-6e230626515e}</TemplateGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>PagesXamarin.iOS</RootNamespace>
+    <RootNamespace>PagesXamarim.iOS</RootNamespace>
     <IPhoneResourcePrefix>Resources</IPhoneResourcePrefix>
-    <AssemblyName>PagesXamarin.iOS</AssemblyName>
+    <AssemblyName>PagesXamarim.iOS</AssemblyName>
     <MtouchEnableSGenConc>true</MtouchEnableSGenConc>
     <MtouchHttpClientHandler>NSUrlSessionHandler</MtouchHttpClientHandler>
   </PropertyGroup>
@@ -120,14 +120,45 @@
     <Reference Include="System.Numerics.Vectors" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="Xamarin.Forms" Version="4.1.0.555618" />
-    <PackageReference Include="Xamarin.Essentials" Version="1.1.0" />
+    <PackageReference Include="Xamarin.Forms" Version="4.2.0.709249" />
+    <PackageReference Include="Xamarin.TestCloud.Agent" Version="0.21.8" />
+    <PackageReference Include="Xamarin.Essentials" Version="1.3.0" />
+    <PackageReference Include="Syncfusion.Xamarin.SfListView">
+      <Version>17.2.0.47</Version>
+    </PackageReference>
+    <PackageReference Include="Plugins.Forms.ButtonCircle">
+      <Version>2.0.3</Version>
+    </PackageReference>
+    <PackageReference Include="Syncfusion.Xamarin.Core">
+      <Version>17.2.0.47</Version>
+    </PackageReference>
+    <PackageReference Include="Syncfusion.Xamarin.SfMaskedEdit">
+      <Version>17.2.0.47</Version>
+    </PackageReference>
+    <PackageReference Include="Prism.DryIoc.Forms">
+      <Version>7.2.0.1367</Version>
+    </PackageReference>
+    <PackageReference Include="Newtonsoft.Json">
+      <Version>12.0.2</Version>
+    </PackageReference>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
   <ItemGroup>
-    <ProjectReference Include="..\PagesXamarin\PagesXamarin.csproj">
-      <Project>{44E930A2-7FA1-4394-B2EB-33D0F3C03B96}</Project>
-      <Name>PagesXamarin</Name>
+    <ProjectReference Include="..\PagesXamarim\PagesXamarim.csproj">
+      <Project>{0FBCFE65-39DA-45C6-A77D-6C21DD6FC809}</Project>
+      <Name>PagesXamarim</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\natacao.png" />
+    <BundleResource Include="Resources\canoe.png" />
+    <BundleResource Include="Resources\judo.png" />
+    <BundleResource Include="Resources\boxing.png" />
+    <BundleResource Include="Resources\american_football.png" />
+    <BundleResource Include="Resources\basketball.png" />
+    <BundleResource Include="Resources\tennis.png" />
+    <BundleResource Include="Resources\baseball.png" />
+    <BundleResource Include="Resources\futbol.png" />
+    <BundleResource Include="Resources\confirm.png" />
   </ItemGroup>
 </Project>

@@ -3,6 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 
 using Foundation;
+using Syncfusion.ListView.XForms.iOS;
+using Syncfusion.XForms.iOS.MaskedEdit;
+using Syncfusion.XForms.iOS.TextInputLayout;
 using UIKit;
 
 namespace PagesXamarin.iOS
@@ -22,7 +25,11 @@ namespace PagesXamarin.iOS
         //
         public override bool FinishedLaunching(UIApplication app, NSDictionary options)
         {
+            Xamarin.Calabash.Start();
             global::Xamarin.Forms.Forms.Init();
+            SfListViewRenderer.Init();
+            SfTextInputLayoutRenderer.Init();
+            SfMaskedEditRenderer.Init();
             LoadApplication(new App());
 
             return base.FinishedLaunching(app, options);
